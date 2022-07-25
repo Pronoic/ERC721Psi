@@ -4,11 +4,14 @@
 [![Build Documentation](https://github.com/estarriolvetch/ERC721Psi/actions/workflows/make_docs.yml/badge.svg)](https://github.com/estarriolvetch/ERC721Psi/actions/workflows/make_docs.yml)
 [![npm version](https://badge.fury.io/js/erc721psi.svg)](https://www.npmjs.com/package/erc721psi)
 
+**ERC721Psi is releasd under MIT opensource licence and free to use. If you need commercial support/service regarding ERC721Psi, feel free to contact [ctor.xyz](https://ctor.xyz)**
+
+
 ERC721Psi is an ERC721 compilant implementation designed for scalable and gas-efficient on-chain application with built-in randomized metadata generation. Inspired by AzukiZen's awesome ERC721A, ERC721Psi also provides batch minting at a fixed gas cost. However, ERC721Psi manages to solve the [scaling issue of token transfer](https://github.com/chiru-labs/ERC721A/issues/145) through the mathematical power of the [de Bruijn sequence](https://en.wikipedia.org/wiki/De_Bruijn_sequence).
 
 Powered by Chainlink's VRF V2, ERC721Psi comes with an extension that can batch mint multiple tokens with tamper-proof on-chain random attributes while retaining the fixed minting gas cost.
 
-Litepaper: https://medium.com/@medievaldao/erc721psi-a-truly-scalable-nft-standard-for-low-gas-on-chain-applications-and-randomized-metadata-c25c9e8ac8a8
+Litepaper: https://mirror.xyz/ctor.xyz/zy3TUWuJFSeWyMWAucTRP45o-sVToKTrtDsUIiD_m48
 
 Slides: https://www.slideshare.net/EstarriolVetch/erc721psi
 
@@ -56,7 +59,7 @@ There are two types of random seed extensions with different schemes of requesti
 ## Considerations
 It is important to realize that `balanceOf`, `totalSupply`, `tokenByIndex`, and `tokenOfOwnerByIndex` in ERC721Psi are not designed to be gas efficient since they are mostly used by front end only. By doing so, we are able to reduce the storage usage and thus minimize the gas consumption for the rest of the functions.
 
-If tracking `balanceOf` on-chain is important for your application, please use the ERC721PsiTrackBalance extension (coming soon).
+If tracking `balanceOf` on-chain is important for your application, please use the `ERC721PsiAddressData` extension.
 
 ## Road Map
 - Implement more extensions.
@@ -70,5 +73,5 @@ PRs on documentations, test cases, and any contract improvemetns are welcomed!!
 ## Projects using ERC721Psi
 If your projects use ERC721Psi, we'd like know more about it!
 Feel free to DM [0xEstarriol](https://twitter.com/0xEstarriol) to share your project.
-- [Medieval Adventurer](https://twitter.com/DaoMedieval)
-- [Haruna Future](https://twitter.com/HarunaNft)
+- Medieval Adventurer: [twitter](https://twitter.com/DaoMedieval), [opensea](https://opensea.io/collection/medieval-adventurer/)
+- Haruna Future: [twitter](https://twitter.com/HarunaNft), [opensea](https://opensea.io/collection/harunafutureofficial)
